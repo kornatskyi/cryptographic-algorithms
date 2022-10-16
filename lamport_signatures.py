@@ -2,7 +2,7 @@ import hashlib
 import os
 from random import random
  
-# Clearing the Screen
+# Clearing the sonsole
 os.system('clear')
 
 """
@@ -68,7 +68,6 @@ signature_hashes= [sha256(sign) for sign in signature]
 
 
 def verify(message:str, signature_hashes:list[str], public_keys:tuple[list[str], list[str]]):
-  is_valid = False
   message_hash_in_binary_representation=messageToBinaryHash(message)
   for i in range(message_hash_in_binary_representation.__len__()):
       if message_hash_in_binary_representation[i] == "0":
